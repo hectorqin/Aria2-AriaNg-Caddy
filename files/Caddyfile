@@ -5,6 +5,9 @@
   basicauth / {$BASICAUTH_USER} {$BASICAUTH_PWD}
   log stdout
   errors stdout
+  proxy /jsonrpc :6800 {
+    websocket
+  }
 }
 
 :10086/mgr {
